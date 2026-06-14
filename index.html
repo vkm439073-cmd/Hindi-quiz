@@ -21,6 +21,7 @@ body{
 }
 
 h1{
+  <p id="progress"></p>
   color:#60a5fa;
 }
 
@@ -111,6 +112,8 @@ document.querySelector(".question-box").innerHTML =
 
 
   let q = quiz[current];
+  document.getElementById("progress").innerHTML =
+"प्रश्न " + (current + 1) + " / " + quiz.length;
   document.getElementById("question").innerHTML = q.q;
 
   document.getElementById("opt0").innerText = q.options[0];
@@ -121,7 +124,8 @@ document.querySelector(".question-box").innerHTML =
 
 function checkAnswer(i){
   let q = quiz[current];
-
+document.getElementById("progress").innerHTML =
+"प्रश्न " + (current + 1) + " / " + quiz.length;
   if(i === q.answer){
   score++;
   alert("सही उत्तर ✅");
