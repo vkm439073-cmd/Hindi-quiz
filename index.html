@@ -99,11 +99,16 @@ let score = 0;
 
 function loadQuestion(){
   if(current >= quiz.length){
-    document.getElementById("question").innerHTML = "Quiz समाप्त!";
-    document.querySelector(".question-box").innerHTML = "";
-    document.getElementById("result").innerHTML =
-      "आपका स्कोर: " + score + "/" + quiz.length;
-    return;
+
+  document.querySelector(".question-box").innerHTML =
+    "<h2>🎉 Quiz समाप्त!</h2>";
+
+  document.getElementById("result").innerHTML =
+    "आपका स्कोर: " + score + "/" + quiz.length;
+
+  return;
+}
+  
   }
 
   let q = quiz[current];
