@@ -123,8 +123,6 @@ document.querySelector(".question-box").innerHTML =
 
 function checkAnswer(i){
   let q = quiz[current];
-document.getElementById("progress").innerHTML =
-"प्रश्न " + (current + 1) + " / " + quiz.length;
   if(i === q.answer){
   score++;
   alert("सही उत्तर ✅");
