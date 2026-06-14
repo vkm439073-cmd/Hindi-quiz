@@ -123,10 +123,11 @@ function checkAnswer(i){
   let q = quiz[current];
 
   if(i === q.answer){
-    score++;
-  } else {
-    alert("गलत उत्तर ❌\nसही उत्तर: " + q.options[q.answer] + "\n\n" + q.exp);
-  }
+  score++;
+  alert("सही उत्तर ✅");
+} else {
+  alert("गलत उत्तर ❌\n\nसही उत्तर: " + q.options[q.answer] + "\n\n" + q.exp);
+}
 
   current++;
   loadQuestion();
